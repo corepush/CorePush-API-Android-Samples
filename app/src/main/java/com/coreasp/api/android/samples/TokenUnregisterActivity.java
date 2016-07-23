@@ -49,7 +49,7 @@ public class TokenUnregisterActivity extends Activity {
                 CorePushAppManager manager = CorePushAppManager.getInstance();
                 mRegistrationProgressBar.setVisibility(ProgressBar.VISIBLE);
 
-                //CORE PUSHにデバイストークンを登録
+                //CORE PUSHサーバからデバイストークンを削除
                 manager.removeToken();
             }
         });

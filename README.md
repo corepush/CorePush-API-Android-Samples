@@ -7,7 +7,7 @@
   * <a href="http://developer.core-asp.com/api_token.php">事前登録API</a>を使用して、Androidのデバイストークンを登録するサンプルコード
 * トークン削除
   * <a href="http://developer.core-asp.com/api_token.php">事前登録API</a>を使用して、Androidのデバイストークンを削除するサンプルコード
-* 通知歴取得
+* 通知履歴取得
   * <a href="http://developer.core-asp.com/api_history.php">通知履歴取得API</a>を使用して、通知履歴を取得するサンプルコード
 
 <p>各APIの詳細については、<a href="http://developer.core-asp.com/index.php">Core Push Developer Support</a>の<a href="http://developer.core-asp.com/api_token.php">CORE PUSH API</a>をご参照ください。</p>

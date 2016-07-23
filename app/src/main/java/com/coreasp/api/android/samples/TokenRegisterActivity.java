@@ -49,7 +49,7 @@ public class TokenRegisterActivity extends Activity {
                 CorePushAppManager manager = CorePushAppManager.getInstance();
                 mRegistrationProgressBar.setVisibility(ProgressBar.VISIBLE);
 
-                //CORE PUSHからデバイストークンを登録
+                //CORE PUSHサーバにデバイストークンを登録
                 manager.registerToken(true);
             }
         });

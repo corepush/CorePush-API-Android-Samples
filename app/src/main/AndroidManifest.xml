@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coreasp.api.android.samples">
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- メインのアクティビティを設定 -->
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- トークン登録のアクティビティを設定 -->
+        <activity android:name=".TokenRegisterActivity"></activity>
+
+        <!-- トークン削除のアクティビティを設定 -->
+        <activity android:name=".TokenUnregisterActivity"></activity>
+
+        <!-- 履歴画面のアクティビティを設定 -->
+        <activity android:name=".HistoryActivity"></activity>
+
+        <!-- MyFirebaseMessagingService -->
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- MyFirebaseInstanceIDService -->
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <!-- CorePushRegistrationIntentService -->
+        <service
+            android:name=".CorePushRegistrationIntentService"
+            android:exported="false"></service>
+    </application>
+
+</manifest>

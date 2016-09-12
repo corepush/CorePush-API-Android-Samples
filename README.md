@@ -18,5 +18,33 @@
   * FCM SDKを使用しています。
   * CORE PUSH SDKは使用していません。
   * CORE PUSHの設定キーが必要になります。CORE PUSHの管理画面でアプリの設定キーをご確認できます。
-  * アプリのプロジェクト固有のgoogle-service.jsonが必要になります。FCMの管理画面でgoogle-service.jsonを取得してください。
+  設定キーの設定については、<a href="#config_key">CORE PUSHの設定キーの設定</a>をご参照ください。
+  
+  * アプリのプロジェクト固有のgoogle-service.jsonが必要になります。Firebaseの管理画面でgoogle-service.jsonを取得してください。 google-service.jsonの取得については、<a href="#firebase_setting">Firebaseの設定</a>をご参照ください。
   * サンプルアプリに対して、通知を送信するにはプロジェクトのAuthKeyが必要になります。CORE PUSH管理画面にて、AuthKeyを登録してください。
+  
+  
+### <div id="firebase_setting">Firebaseの設定</div>
+  * <a href="https://console.firebase.google.com">Firebaseの管理画面</a>
+  で「新規プロジェクトの作成」 あるいは「Googleプロジェクトのインポート」を行い、Firebase用の
+  プロジェクトを作成します。
+  * 「AndroidアプリにFirebaseを追加」のボタンをクリックし、追加の設定を行います。
+    * 追加の設定画面では、アプリのパッケージ名を指定します。サンプルプロジェクトの例では、
+    com.coreasp.api.android.samples がパッケージ名になります。
+    * パッケージ名の指定後、google-package.jsonをローカルにダウンロードします。
+  * サンプルプロジェクト内のappフォルダ配下のgoogle-package.jsonファイルをダウンロードしたjsonファイルで置換します。
+    * サンプルプロジェクトのパッケージ名と異なるパッケージ名でFirebaseの追加設定を行った場合は、指定したパッケージ名に合わせて
+    サンプルプロジェクトのパッケージ構成を変更してください。
+    
+
+### <div id="config_key">CORE PUSHの設定キーの設定</div>
+* CORE PUSHの管理画面で確認したアプリの設定キーを res/values/strings.xml内の 
+core_push_config_keyキーの値に指定してください。
+
+```
+<resources>
+    <string name="app_name">CorePushSamples</string>
+    <string name="core_push_config_key">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+</resources>
+
+```
